@@ -27,10 +27,10 @@ SECRET_KEY = ''
 
 if 'win' in sys.platform:
     DEBUG = True
-    ALLOWED_HOSTS = ['127.0.0.1']
+    ALLOWED_HOSTS = ['127.0.0.1','localhost']
 else:
-    DEBUG = False
-    ALLOWED_HOSTS = ['cpct.app.cloud.gov', 'cpct.cfapps.io']
+    DEBUG = True
+    ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -122,16 +122,16 @@ USE_TZ = True
 
 if 'win' in sys.platform:
     # must be false to run without https in debugger
-    SESSION_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = False
     CSRF_COOKIE_SECURE = False
     CSRF_COOKIE_HTTPONLY = True
 else:
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
     CSRF_COOKIE_HTTPONLY = True
-    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-    SECURE_HSTS_SECONDS = 31536000
-    SECURE_HSTS_PRELOAD = True
+    #SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    #SECURE_HSTS_SECONDS = 31536000
+    #SECURE_HSTS_PRELOAD = True
 
 
 # Static files (CSS, JavaScript, Images)
