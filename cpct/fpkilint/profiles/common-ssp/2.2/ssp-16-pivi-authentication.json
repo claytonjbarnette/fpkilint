@@ -1076,7 +1076,7 @@
     {
         "Section":  "basic_constraints",
         "Item":  "path_length_constraint_req",
-        "Value":  "2",
+        "Value":  "1",
         "OID":  ""
     },
     {
